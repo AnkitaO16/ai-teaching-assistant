@@ -2,8 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./components/Layout";
 import TeacherUpload from "./pages/TeacherUpload";
 import StudentChat from "./pages/StudentChat";
-
-
+import "./index.css";
 function App() {
   return (
     <BrowserRouter>

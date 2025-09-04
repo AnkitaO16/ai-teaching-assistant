@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 export default function Layout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="flex items-center gap-6 px-6 py-4 border-b border-border bg-bg">
+      <header className="flex items-center gap-6 px-6 py-4 border-b border-border bg-background">
         <div className="font-extrabold text-lg">🧠 AI Tutor</div>
         <nav className="flex gap-3">
           <NavLink
