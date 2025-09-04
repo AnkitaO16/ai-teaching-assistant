@@ -11,7 +11,7 @@ pydantic_core==2.33.2
 typing_extensions==4.14.1
 
 # --- Vector DB + LLM orchestration (modular, no monolith) ---
-chromadb==0.5.5
+chromadb==0.5.20                  # ✅ upgrade to satisfy llama-index
 llama-index-core==0.13.4
 llama-index-llms-groq==0.4.0
 llama-index-embeddings-openai==0.5.0
