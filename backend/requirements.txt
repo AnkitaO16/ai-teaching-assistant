@@ -1,20 +1,20 @@
-# Core web framework
+# --- Core web framework ---
 fastapi==0.116.1
 uvicorn==0.35.0
 starlette==0.47.2
 
-# Env + utils
+# --- Env + utils ---
 python-dotenv==1.1.1
 python-multipart==0.0.20
 pydantic==2.11.7
 pydantic_core==2.33.2
 typing_extensions==4.14.1
 
-# Vector DB
+# --- Vector DB + LLM orchestration ---
 chromadb==0.4.24
-llama-index==0.9.48   # lightweight + still has HuggingFace/OpenAI/Groq/Ollama
+llama-index==0.9.48   # lightweight; includes Groq + OpenAI embeddings
 
-# Other deps already used in your repo
+# --- Misc utilities already in repo ---
 annotated-types==0.7.0
 anyio==4.10.0
 click==8.2.1
