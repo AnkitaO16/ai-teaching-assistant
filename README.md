@@ -134,3 +134,5 @@ Since FastAPI endpoints expect **form-data**, use these:
 * git add .
 * git commit -m "Added ingest service"
 * git push origin feature/ai-ingest
+.\venv\Scripts\activate
+

@@ -1,5 +1,5 @@
 from llama_index.core import Settings
-from llama_index.embeddings.huggingface import HuggingFaceEmbedding
+from llama_index.embeddings.openai import OpenAIEmbedding
 import chromadb
 from llama_index.vector_stores.chroma import ChromaVectorStore
 from llama_index.core import VectorStoreIndex, StorageContext
@@ -12,43 +12,21 @@ groq_key = os.getenv("GROQ_API_KEY")
 print("DEBUG >>> GROQ_API_KEY =", groq_key)
 
 # ================================
-# 🔹 Direct test: Groq official SDK
-# ================================
-try:
-    from groq import Groq as GroqSDK
-    client = GroqSDK(api_key=groq_key)
-    resp = client.chat.completions.create(
-        # ✅ Updated to new model
-        model="llama-3.1-8b-instant",
-        messages=[{"role": "user", "content": "Hello from direct Groq SDK"}]
-    )
-    print("✅ Direct Groq SDK works:", resp.choices[0].message.content)
-except Exception as e:
-    print("❌ Direct Groq SDK failed:", e)
-
-# ================================
 # 🔹 LlamaIndex Groq Integration
 # ================================
 from llama_index.llms.groq import Groq
-from llama_index.llms.ollama import Ollama
 
 if groq_key:
     print("✅ Using Groq with API key in LlamaIndex")
     Settings.llm = Groq(
-        # ✅ Updated to new model
-        model="llama-3.1-8b-instant",
+        model="llama-3.1-8b-instant",  # lightweight Groq model
         api_key=groq_key
     )
 else:
-    print("⚠️ GROQ_API_KEY not found, falling back to local Ollama")
-    Settings.llm = Ollama(
-        model="llama3.1:8b",
-        request_timeout=60.0,
-        base_url="http://127.0.0.1:11434"
-    )
+    raise RuntimeError("❌ GROQ_API_KEY not found. Please set it in your environment.")
 
-# ✅ Configure embeddings (lightweight, stays local)
-Settings.embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")
+# ✅ Use lightweight embeddings (instead of HuggingFace/torch)
+Settings.embed_model = OpenAIEmbedding(model="text-embedding-3-small")
 
 # ✅ Chroma client
 chroma_client = chromadb.PersistentClient(path="chroma_db")

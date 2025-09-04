@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f4e27b2-151b-4089-b3b1-5c6a2e1fa7aa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/test_groq.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend" beforeDir="false" afterPath="$PROJECT_DIR$/backend" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/chroma_db/5a9fa514-fb42-4531-895e-52022b4c6a81/length.bin" beforeDir="false" afterPath="$PROJECT_DIR$/backend/chroma_db/5a9fa514-fb42-4531-895e-52022b4c6a81/length.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/chroma_db/chroma.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/backend/chroma_db/chroma.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/services/ingest_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/ingest_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/services/query_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/query_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/utils/collections.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/collections.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,36 +30,39 @@
     &quot;assignee&quot;: &quot;AnkitaO16&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/AnkitaO16/AI-Tutor.git&quot;,
-    &quot;accountId&quot;: &quot;484d5578-3886-4c8e-baeb-d1da9cb18038&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/AnkitaO16/ai-teaching-assistant.git",
+    "accountId": "484d5578-3886-4c8e-baeb-d1da9cb18038"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="31oU4r0t4mz8b8KyeKRHq9aCxVg" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.app.executor": "Run",
-    "Python.ingest_data.executor": "Run",
-    "Python.ingest_teacher_data.executor": "Run",
-    "Python.ingest_teacher_file.executor": "Run",
-    "Python.query_chroma.executor": "Run",
-    "Python.query_service.executor": "Run",
-    "Python.test_groq.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/init",
-    "last_opened_file_path": "C:/Users/cspl_ankita/git-AnkitaO16/ai-teaching-assistant"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ingest_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ingest_teacher_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ingest_teacher_file.executor&quot;: &quot;Run&quot;,
+    &quot;Python.query_chroma.executor&quot;: &quot;Run&quot;,
+    &quot;Python.query_service.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_groq.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/init&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/cspl_ankita/git-AnkitaO16/ai-teaching-assistant&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\cspl_ankita\git-AnkitaO16\ai-teaching-assistant\backend" />
