@@ -135,4 +135,66 @@ Since FastAPI endpoints expect **form-data**, use these:
 * git commit -m "Added ingest service"
 * git push origin feature/ai-ingest
 .\venv\Scripts\activate
+## deploy 
+Ahh I see what’s happening 👀
+
+👉 The error `bash: railway: command not found` means you **don’t have the Railway CLI installed** on your machine.
+It doesn’t matter if your project is Python (pip) — Railway CLI is a separate tool that you use to connect your local project to Railway’s servers.
+
+---
+
+### 🚀 Install Railway CLI on Windows (your case: MINGW64 / Git Bash)
+
+Run this inside your terminal:
+
+```bash
+curl -fsSL https://railway.app/install.sh | sh
+```
+
+Then restart your terminal, and check:
+
+```bash
+railway --version
+```
+
+---
+
+### If that fails (Windows sometimes blocks curl installer)
+
+Install via **npm** (you already have Node.js because you have a frontend):
+
+```bash
+npm install -g @railway/cli
+```
+
+Then verify:
+
+```bash
+railway --version
+```
+
+---
+
+### ✅ Once installed
+
+From inside your **backend** folder (where `requirements.txt` is):
+
+```bash
+cd backend
+railway init   # link project to Railway
+railway up     # deploy using requirements.txt + Procfile
+```
+
+---
+
+⚡ Important: Railway looks for a **Procfile** or detects Python automatically.
+So inside `backend/Procfile` add:
+
+```
+web: uvicorn app:app --host 0.0.0.0 --port $PORT
+```
+
+---
+
+Do you want me to prepare the exact **backend folder layout** (Procfile, requirements.txt, app.py) so you can deploy without Railway guessing wrong again?
 
