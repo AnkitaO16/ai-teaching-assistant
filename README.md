@@ -196,5 +196,4 @@ web: uvicorn app:app --host 0.0.0.0 --port $PORT
 
 ---
 
-Do you want me to prepare the exact **backend folder layout** (Procfile, requirements.txt, app.py) so you can deploy without Railway guessing wrong again?
 

@@ -1,36 +1,20 @@
-# --- Core web framework ---
-fastapi==0.116.1
-uvicorn==0.35.0
-starlette==0.47.2
+# Core
+pip~=25.1.1
+typing_extensions~=4.14.0
+filelock~=3.18.0
+cryptography~=45.0.4
+protobuf~=6.31.1
+google~=3.0.0
 
-# --- Env + utils ---
-python-dotenv==1.1.1
-python-multipart==0.0.20
-pydantic==2.11.7
-pydantic_core==2.33.2
-typing_extensions==4.14.1
+# Backend
+fastapi~=0.115.13
+uvicorn[standard]~=0.30.6
+python-dotenv~=1.0.1
 
-# --- Vector DB + LLM orchestration (modular, no monolith) ---
-chromadb==0.5.20                  # ✅ upgrade to satisfy llama-index
-llama-index-core==0.13.4
-llama-index-llms-groq==0.4.0
-llama-index-embeddings-openai==0.5.0
-llama-index-embeddings-huggingface==0.6.0
-llama-index-vector-stores-chroma==0.5.2
-llama-index-readers-file==0.5.2
+# Chroma & Vector DB
+chromadb~=0.5.4
+llama-index~=0.11.0
 
-# --- Misc utilities ---
-annotated-types==0.7.0
-anyio==4.10.0
-click==8.2.1
-colorama==0.4.6
-idna==3.10
-tqdm==4.67.1
-urllib3==2.5.0
-regex==2025.7.34
-sniffio==1.3.1
-PyYAML==6.0.2
-
-# --- Compatibility fixes ---
-numpy<2.0
-setuptools>=65.0.0
+# PDF/Text
+pypdf~=5.1.0
+sentence-transformers~=3.0.1

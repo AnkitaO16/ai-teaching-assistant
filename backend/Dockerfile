@@ -1,25 +1,26 @@
-# Use slim Python base (lightweight but stable)
+# Base image
 FROM python:3.12-slim
 
-# Set working directory
+# Set workdir
 WORKDIR /app
 
-# Install system dependencies required by chromadb/llama-index
+# Install system deps
 RUN apt-get update && apt-get install -y \
     build-essential \
-    curl \
+    libmagic1 \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy requirements and install dependencies
+# Copy requirements first (for caching)
 COPY requirements.txt .
-RUN pip install --no-cache-dir --upgrade pip setuptools wheel \
-    && pip install --no-cache-dir -r requirements.txt
 
-# Copy project code
+# Install Python deps
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy backend source
 COPY . .
 
 # Expose Railway port
-ENV PORT=8000
+EXPOSE 8000
 
-# Start app (Railway injects PORT env automatically)
-CMD ["sh", "-c", "uvicorn app:app --host 0.0.0.0 --port ${PORT}"]
+# Default start command
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
